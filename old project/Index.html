@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=se" />
+</head>
+
+<body>
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Table • CRUD</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <div class="head">
+          <h2>ADMIN</h2>
+          <button class="btn primary" id="addBtn">+ Add User</button>
+          <div>
+
+            <input type="text" id="search" class="Search-ber" placeholder="Search..">
+            <button class="btn primary" id="addBtn">Submit</button>
+          </div>
+          <button class="primary" id="syinceBtn">syinch</button>
+        </div>
+        <div style="overflow:auto">
+          <table class="table" id="tbl">
+            <thead>
+              <tr id="mlt">
+                <th style="width:22%">Name</th>
+                <th style="width:26%">Email</th>
+                <th style="width:12%">ID</th>
+                <th style="width:14%">Salary</th>
+                <th style="width:16%">Date of Birth</th>
+                <th style="width:10%">Actions</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              <!-- rows render here -->
+            </tbody>
+          </table>
+
+        </div>
+        <div id="empty" class="empty" hidden>No users yet. Click “Add User”.</div>
+      </div>
+      <p class="hint" style="margin-top:10px">Data is stored locally in your browser (localStorage).</p>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+      <div class="sheet">
+        <header>
+          <h3 id="modalTitle">Add User</h3>
+          <button class="btn ghost" id="closeModal">✕</button>
+        </header>
+        <form id="form">
+          <div class="row">
+            <div>
+              <label>Name
+                <input required name="name" placeholder="John Doe" />
+              </label>
+            </div>
+            <div>
+              <label>Email
+                <input required type="email" name="email" placeholder="john@company.com" />
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>ID
+                <input required name="id" placeholder="EMP-1001" />
+              </label>
+            </div>
+            <div>
+              <label>Salary (USD)
+                <input required type="number" step="100" min="0" name="salary" placeholder="5000" />
+              </label>
+            </div>
+          </div>
+          <div class="row">
+            <div>
+              <label>Date of Birth
+                <input required type="date" name="dob" />
+              </label>
+            </div>
+            <div></div>
+          </div>
+        </form>
+
+        <footer>
+          <button class="btn ghost" id="cancelBtn">Cancel</button>
+          <button class="btn primary" id="saveBtn">Save</button>
+        </footer>
+      </div>
+    </div>
+    <section class="page">
+      <a href="#">prev</a>
+      <a href="#" class="active">1</a>
+      <a href="#">2</a>
+      <a href="#">3</a>
+      <a href="#">4</a>
+      <a href="#">5</a>
+      <a href="#">6</a>
+      <a href="#" class="arow"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16"
+          id="Right-Chevron--Streamline-Block-Free" height="16" width="16">
+          <desc>
+            Right Chevron Streamline Icon: https://streamlinehq.com
+          </desc>
+          <path fill="#ffffff" fill-rule="evenodd"
+            d="m9.00002 14.9997 -9.0000187761 0L6.99999 7.99975 0 1l9.00002 0L16 7.99975 9.00002 14.9997Z"
+            clip-rule="evenodd" stroke-width="1"></path>
+        </svg></a>
+    </section>
+
+    <script src="script.js"></script>
+
+
+
+  </body>
+
+  </html>
+
+</body>
+
+</html>

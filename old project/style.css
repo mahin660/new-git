@@ -1,0 +1,225 @@
+ :root {
+        --bg: #0f1220;
+        --card: #15182a;
+        --muted: #8892a6;
+        --text: #e8ecf3;
+        --line: #232846;
+        --accent: #4f7df3;
+        --danger: #ef476f;
+        --ok: #22c55e;
+        --radius: 14px;
+        --shadow: 0 18px 45px rgba(0, 0, 0, .35);
+      }
+
+      * {
+        box-sizing: border-box
+      }
+
+      body {
+        margin: 0;
+        font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+        background: var(--bg);
+        color: var(--text);
+        align-items: center;
+      }
+
+     .wrap{
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px;
+     }
+     .Search-ber{
+      width: 150px;
+     }
+     .card{
+      background-color: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+     }
+     .head{
+      display: flex;
+      grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+      align-items: center;
+      padding: 20px 30px;
+      border-bottom: 1px solid var(--line);
+      gap: 110px;
+      width: 100%;
+     }
+     .primary{
+      padding: 8px 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #4f7df3;
+      color: white;
+      cursor: pointer;
+     }
+     .head input{
+      width: 130px;
+     }
+     .head h2{
+      margin: 0;
+      font-weight: 800;
+      letter-spacing: .2px;
+     }
+
+     .btn{
+      appearance: none;
+      border: 0;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-weight: 700;
+      cursor: pointer;
+     }
+     .btn.primary{
+      background: var(--accent);
+      color: #fff;
+     }
+     .btn.ghost{
+      background: transparent;
+      color: var(--muted);
+     }
+
+     .table{
+      width: 100%;
+      border-collapse: collapse;
+     }
+     .table thead th{
+      font-size: .82rem;
+      text-transform: uppercase;
+      letter-spacing: .08rem;
+      color: var(--muted);
+      text-align: left;
+      padding: 12px 20px;
+     }
+     .table tbody tr{
+      border-top:1px solid var(--line);
+      padding: 14px 16px;
+      vertical-align: middle;
+     }
+     .status{
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: .78rem;
+      background: #193c2d;
+      color: #8af0b3;
+     }
+     .actions{
+      display: flex;
+      gap: 10px;
+     }
+     .icon-btn{
+      background: #1a1f35;
+      color: #cdd6f4;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      width: 36px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+     }
+     .icon-btn.ok{
+      border-color:#1f4830 ;
+      color: #95f7b9;
+     }
+     .icon-btn.warm{
+      border-color: #45212b;
+      color: #ff92ab;
+     }
+
+     .empty{
+      color: var(--muted);
+      text-align: center;
+      padding: 36px 0;
+     }
+      .input{
+        width: 130px;
+      }
+     /* modal */
+
+     .modal{
+      position: fixed;
+      inset: 0;
+      display: none;
+      place-items: center;
+      background: rgba(8, 10, 20, .6);
+      padding: 18px;
+     }
+     .modal.open{
+      display: grid;
+     }
+     .sheet{
+      background: #101429;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      width: min(560px, 92vw);
+      box-shadow: var(--shadow);
+     }
+     .sheet header{
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+     }
+     .sheet h3{
+      margin: 0;
+     }
+     .sheet form{
+      display: grid;
+      gap: 12px;
+      padding: 16px 18px;
+     }
+     .row{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+     }
+     label{
+      font-size: .82rem;
+      color: var(--muted);
+     }
+     input{
+      width: 100%;
+      margin-top: 6px;
+      background: #0b0f1f;
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 12px;
+     }
+
+     .sheet footer{
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      padding: 14px 18px;
+      border-top: 1px solid var(--line);
+     }
+     .hint{
+      color: var(--muted);
+      font-size: .82rem;
+     }
+     .section{
+      align-items: center;
+      margin-left: 500px;
+     }
+     .page{
+      align-items: center;
+      margin-left: 350px;
+     }
+     .page a{
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--accent);
+      padding: 10px;
+      color: white;
+      border-radius: 6px;
+     }
+     .active{
+      background-color: var(--accent);
+      color: #ffffff;
+      border: none;
+     }
