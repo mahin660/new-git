@@ -171,9 +171,22 @@ window.deleteUser = i => {
 // ---------------------- SEARCH ----------------------
 search.addEventListener('input', () => {
   const text = search.value.toLowerCase();
-  const filtered = data.filter(u => u.name.toLowerCase().includes(text));
-  render(filtered);
+
+  // Find the index of the first matching user
+  const index = data.findIndex(u => u.name.toLowerCase().includes(text));
+
+  if (index !== -1) {
+    // Calculate the page number where this user is
+    currentPage = Math.floor(index / USERS_PER_PAGE) + 1;
+  } else {
+    // If no match, go back to page 1
+    currentPage = 1;
+  }
+
+  // Render the current page (with pagination applied)
+  render(data);
 });
+
 
 // ---------------------- FETCH FACE API USERS ----------------------
 
